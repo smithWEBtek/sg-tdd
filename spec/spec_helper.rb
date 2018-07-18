@@ -18,6 +18,16 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   DatabaseCleaner.strategy = :truncation
 
+	 # Use color in STDOUT
+	 config.color = true
+
+	 # Use color not only in STDOUT but also in pagers and files
+	 config.tty = true
+ 
+	 # Use the specified formatter
+	 config.formatter = :documentation # :progress, :html,
+																		 # :json, CustomFormatterClass
+
   config.before do
     DatabaseCleaner.clean
   end

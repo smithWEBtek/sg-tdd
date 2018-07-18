@@ -1,0 +1,8 @@
+<h1> All Diners </h1>
+
+<% Diner.all.each do |diner| %>
+	<fieldset>
+	<p>Name: <%= diner.name.upcase %></p>
+	<p>Specialty: <%= diner.specialty %></p>
+	</fieldset>
+<% end %>
